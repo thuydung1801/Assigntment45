@@ -44,3 +44,4 @@ def show_product(request, product_slug):
     request.session.set_test_cookie() 
     # return render(request, 'catalog/product.html', {'categories': categories, 'p':p, 'form':form})
     return render(request, 'catalog/product.html', locals())
+

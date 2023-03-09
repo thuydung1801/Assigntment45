@@ -1,5 +1,6 @@
 from django.db import models
 from catalog.models import Product
+from django import forms
 
 class CartItem(models.Model):
     cart_id = models.CharField(max_length=50)
@@ -26,3 +27,8 @@ class CartItem(models.Model):
     def augment_quantity(self, quantity):
         self.quantity = self.quantity + int(quantity)
         self.save()
+
+class ProductAddToCartForm(forms.ModelForm):
+    class Meta:
+        model = CartItem
+        fields = ('quantity',)
