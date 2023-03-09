@@ -75,6 +75,7 @@ TEMPLATES = [
                 'utils.context_processors.context1',
             ],
         },
+    
     },
 ]
 
